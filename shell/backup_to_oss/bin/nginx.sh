@@ -7,7 +7,7 @@
 
 set -x
 
-app_home="/opt/shell/nginx_to_oss"
+app_home="/opt/shell/backup_to_oss"
 bin_dir="${app_home}/bin"
 config_dir="${app_home}/config"
 data_dir="${app_home}/data"

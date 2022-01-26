@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
-# Auth: liuli
-# Version: v1.0, 2021/07/09
-# Sys: CentOS 7.9
-# Features: 备份相关文件至oss
+# Author: liuli <liuli@jiankang.com>
+# Version: v1.0, 2022/01/25
+# Sys: CentOS 7.9.2009
+# Features: 实现指定目录备份到 OSS
+# Prepare：
+
+set -x
+
+source ../config/env.conf ../config/ossutil.conf
 
 now_time=$(date +%Y-%m-%d-%H%M)
 bucket_name=baikang-bak
