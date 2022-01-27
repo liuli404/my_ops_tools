@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6c909e1-a8ec-4286-93ef-b59a1238f2d8" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ops_tool.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/backup_to_oss/config/env.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/backup_to_oss/config/ossutil.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/backup_to_oss/lib/ossutil64" afterDir="false" />
+    <list default="true" id="f6c909e1-a8ec-4286-93ef-b59a1238f2d8" name="变更" comment="目录结构更改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/backup_to_oss/bin/data_bak.sh" beforeDir="false" afterPath="$PROJECT_DIR$/shell/backup_to_oss/bin/data_bak.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shell/backup_to_oss/bin/nginx.sh" beforeDir="false" afterPath="$PROJECT_DIR$/shell/backup_to_oss/bin/nginx.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +44,14 @@
       <option name="presentableId" value="Default" />
       <updated>1643168940807</updated>
     </task>
+    <task id="LOCAL-00001" summary="目录结构更改">
+      <created>1643179997203</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643179997203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -66,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="目录结构更改" />
+    <option name="LAST_COMMIT_MESSAGE" value="目录结构更改" />
   </component>
 </project>
