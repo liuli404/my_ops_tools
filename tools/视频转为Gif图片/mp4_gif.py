@@ -1,4 +1,6 @@
 from moviepy.editor import *
+import imageio
+from PIL import Image, ImageSequence
 import os
 
 
@@ -31,12 +33,13 @@ def mp4_to_gif(filename=None, in_path='.', out_path='.', t_start=0, t_end=None):
     """
     try:
         for i in filename:
-            clip = (VideoFileClip(in_path + '\\' + i).subclip(t_start=t_start, t_end=t_end).resize(height=None, width=300))
+            clip = (
+                VideoFileClip(in_path + '\\' + i).subclip(t_start=t_start, t_end=t_end).resize(height=None, width=300))
             clip.write_gif(out_path + '\\' + i + '.gif')
     except Exception as e:
         return str(e)
 
 
 if __name__ == '__main__':
-    file_list = get_filename(r'E:\代码\ops_tool\tools\视频转为Gif图片\视频')
-    mp4_to_gif(file_list, r'E:\代码\ops_tool\tools\视频转为Gif图片\视频', r'E:\代码\ops_tool\tools\视频转为Gif图片\图片', 0, 10)
+    file_list = get_filename(r'C:\Users\liuli\Pictures\Saved Pictures')
+    mp4_to_gif(file_list, r'C:\Users\liuli\Pictures\Saved Pictures', r'C:\Users\liuli\Pictures\gif')
