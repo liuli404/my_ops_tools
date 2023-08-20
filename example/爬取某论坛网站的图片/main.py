@@ -70,11 +70,9 @@ if __name__ == '__main__':
             home_url = f'https://9k1024.com/pw/thread1022.php?fid=174&page={pg_num}'
             # 对每个页面解析，获取符合条件的标题的 uri 列表
             title_uri_list = get_title_list(home_url)
-            print(f"第{pg_num}页符合条件的帖子链接：{title_uri_list}")
             # 根据标题 uri 列表，解析每篇文章，获取文章中的图片连接列表
             for title in title_uri_list:
                 img_list = get_img_list(title)
-                print(f"获取到 {len(img_list)} 个图片URL。")
                 # 根据图片链接列表，下载至本地路径
                 try:
                     # 创建进程对象
