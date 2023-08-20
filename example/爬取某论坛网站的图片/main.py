@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import uuid
 import multiprocessing
-from functools import partial
 
 
 # 使用 bs4 对网页首页解析，对帖子标题进行筛选，获取带 GIF、动图字样的网站标题链接，并组成列表。
@@ -65,7 +64,6 @@ def download_img(url):
 
 
 if __name__ == '__main__':
-
     try:
         for pg_num in range(1, 50):
             print(f"开始下载第{pg_num}页内容。")
@@ -88,7 +86,7 @@ if __name__ == '__main__':
                     # # 线程等待
                     pool.join()
                 except Exception as e:
-                    print(f"{img_list}下载异常：{str(e)}")
+                    print(f"下载异常：{str(e)}")
             print(f"第{pg_num}页的所有帖子图片下载结束")
     except Exception as e:
         print(f"发生了未知的异常: {str(e)}")
