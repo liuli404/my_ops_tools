@@ -51,7 +51,7 @@ def download_img(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/80.0.3987.106 Safari/537.36 Edg/80.0.361.54'}
-    response = requests.get(headers=headers, url=url, stream=True)
+    response = requests.get(headers=headers, url=url, stream=True, timeout=30)
     if response.status_code == 200:
         file_path = "D:\\telegram"
         file_name = str(uuid.uuid4())
@@ -65,7 +65,7 @@ def download_img(url):
 
 if __name__ == '__main__':
     try:
-        for pg_num in range(1, 50):
+        for pg_num in range(70, 90):
             print(f"开始下载第{pg_num}页内容。")
             home_url = f'https://9k1024.com/pw/thread1022.php?fid=174&page={pg_num}'
             # 对每个页面解析，获取符合条件的标题的 uri 列表
@@ -77,7 +77,7 @@ if __name__ == '__main__':
                 try:
                     # 创建进程对象
                     pool = multiprocessing.Pool()  # 无参数时，使用所有cpu核
-                    # pool = multiprocessing.Pool(5)
+                    # pool = multiprocessing.Pool(5)    ·
                     pool.map(download_img, img_list)
                     # 关闭线程池
                     pool.close()
