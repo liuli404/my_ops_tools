@@ -15,7 +15,6 @@ def get_filename(path=None):
         print('没有查到符合条件的文件')
     res = []
     for i in f_list:
-        # os.path.splitext(): 分离文件名与扩展名
         if os.path.splitext(i)[-1] == '.mp4':
             res.append(i)
     return res
@@ -33,13 +32,15 @@ def mp4_to_gif(filename=None, in_path='.', out_path='.', t_start=0, t_end=None):
     """
     try:
         for i in filename:
+            print(f"{i}----start")
             clip = (
                 VideoFileClip(in_path + '\\' + i).subclip(t_start=t_start, t_end=t_end).resize(height=None, width=300))
             clip.write_gif(out_path + '\\' + i + '.gif')
+            print(f"{i}----ok")
     except Exception as e:
         return str(e)
 
 
 if __name__ == '__main__':
-    file_list = get_filename(r'C:\Users\liuli\Pictures\Saved Pictures')
-    mp4_to_gif(file_list, r'C:\Users\liuli\Pictures\Saved Pictures', r'C:\Users\liuli\Pictures\gif')
+    file_list = get_filename(r'D:\telegram')
+    mp4_to_gif(file_list, r'D:\\telegram', r'D:\\telegram\\gif')
